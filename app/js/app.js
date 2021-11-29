@@ -7,6 +7,7 @@ const body = document.querySelector(".body");
 const imageBox = document.querySelector(".imgBox");
 const lightbox = document.querySelector(".lightbox");
 const closeBtn = document.querySelector(".close");
+const colLightBox = document.querySelector(".col-1");
 
 //CAROUSEL
 const gallery = document.querySelectorAll(".thumb");
@@ -70,31 +71,23 @@ hamburger.addEventListener('click', function() {
 });
 
 // MENU CHECKOUT
-
-$(function() {
-    $(cartBox).on("click", function(e) {
-        if (cartBox.classList.contains("check")) {
-            $(cartBox).removeClass("check");
-            $(checkBox).css("opacity", 0)
-        } else {
-            $(cartBox).addClass("check");
-            $(checkBox).css({
-                opacity: 1,
-                "z-index": 1
-            })
-        }
-        e.stopPropagation()
-    });
-    $(document).on("click", function(e) {
-        if ($(e.target).is(checkBox) === false) {
-            $(cartBox).removeClass("check");
-            $(checkBox).css({
-                opacity: 0,
-                "z-index": -1
-            })
-        }
-    });
+cartBox.addEventListener('click', function() {
+    if (cartBox.classList.contains("check")) {
+        cartBox.classList.remove("check");
+        checkBox.style.opacity = 0
+    } else {
+        cartBox.classList.add("check");
+        checkBox.style.opacity = 1
+        checkBox.classList.add('active-w-cart');
+    }
 });
+document.addEventListener('click', (e) => {
+    if (!checkBox.contains(e.target) && !cartBox.contains(e.target)) {
+        cartBox.classList.remove("check");
+        checkBox.style.opacity = 0
+    };
+});
+
 
 //LIGHTBOX
 closeBtn.addEventListener('click', function() {
@@ -106,6 +99,7 @@ closeBtn.addEventListener('click', function() {
         body.classList.add("no-scroll");
     }
 });
+
 
 imageBox.addEventListener('click', function() {
     if (lightbox.classList.contains("open-lightbox")) {
@@ -271,6 +265,12 @@ btnPrice.addEventListener('click', function() {
 });
 
 cancella.addEventListener('click', function() {
+
+
+    cartBox.classList.remove("check");
+    checkBox.style.opacity = 0
+    checkBox.classList.remove('active-w-cart');
+
     boxBuy.style.display = "none";
     boxEmpty.style.display = "flex";
     carrello.style.opacity = 0;
