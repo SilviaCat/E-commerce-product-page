@@ -1,0 +1,276 @@
+        .shop {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            @media screen and (max-width: 767px) {
+                flex-wrap: wrap;
+            }
+            @media screen and (min-width: 768px) {
+                padding-left: 44px;
+                padding-right: 44px;
+            }
+            .col-1 {
+                width: 100%;
+                @media screen and (min-width: 768px) {
+                    max-width: 370px;
+                }
+                @media screen and (min-width: 1024px) {
+                    max-width: 445px;
+                }
+                .box_image {
+                    position: relative;
+                    img {
+                        cursor: pointer;
+                        @media screen and (min-width: 768px) {
+                            border-radius: 20px;
+                        }
+                        max-width: 100%;
+                        background-size: cover;
+                        @media screen and (min-width: 768px) {
+                            max-width: 370px;
+                        }
+                        @media screen and (min-width: 1024px) {
+                            max-width: 445px;
+                        }
+                    }
+                    .frecce {
+                        &__dx {
+                            display: flex;
+                            align-items: center;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 16px;
+                            .dx {
+                                cursor: pointer;
+                                width: 40px;
+                                height: 40px;
+                                background-color: $white;
+                                border-radius: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                svg {
+                                    transition: all 150ms ease-in-out;
+                                    stroke: #000000;
+                                    &:hover {
+                                        stroke: #FF7D1A;
+                                    }
+                                }
+                            }
+                        }
+                        &__sx {
+                            display: flex;
+                            align-items: center;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 16px;
+                            .sx {
+                                cursor: pointer;
+                                width: 40px;
+                                height: 40px;
+                                background-color: $white;
+                                border-radius: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                svg {
+                                    transition: all 150ms ease-in-out;
+                                    stroke: #000000;
+                                    &:hover {
+                                        stroke: #FF7D1A;
+                                    }
+                                }
+                            }
+                        }
+                        @media screen and (min-width: 768px) {
+                            display: none;
+                        }
+                    }
+                }
+                .box_image_thumb {
+                    @media screen and (max-width: 767px) {
+                        display: none;
+                    }
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 45px;
+                    .thumb {
+                        border-radius: 10px;
+                        position: relative;
+                        width: 20%;
+                        height: 0;
+                        padding-bottom: 20%;
+                        overflow: hidden;
+                        cursor: pointer;
+                        img {
+                            transition: all 150ms ease-in-out;
+                            width: 100%;
+                            &:hover {
+                                opacity: 0.75;
+                            }
+                        }
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            background-color: $white;
+                            width: 100%;
+                            top: 0;
+                            bottom: 0;
+                            z-index: -1;
+                        }
+                    }
+                    .active {
+                        outline: 2px solid $orange;
+                        img {
+                            transition: all 150ms ease-in-out;
+                            opacity: 0.5;
+                            &:hover {
+                                opacity: 0.5;
+                            }
+                        }
+                    }
+                }
+            }
+            .col-2 {
+                width: 100%;
+                margin-left: 24px;
+                margin-right: 24px;
+                @media screen and (min-width: 768px) {
+                    margin-left: 60px;
+                    margin-right: 0px;
+                }
+                @media screen and (min-width: 1024px) {
+                    margin-left: 112px;
+                }
+                .titolo {
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                    &__small {
+                        font-size: 14px;
+                        color: $orange;
+                        text-transform: uppercase;
+                        @media screen and (max-width: 767px) {
+                            margin-top: 26px;
+                        }
+                    }
+                    &__big {
+                        margin-top: 24px;
+                        margin-bottom: 44px;
+                        font-size: 41px;
+                        line-height: 1.1;
+                        color: $veryDarkBlue;
+                        font-weight: 700;
+                        @media screen and (max-width: 767px) {
+                            margin-bottom: 22px;
+                            font-size: 25px;
+                        }
+                    }
+                }
+                .description {
+                    font-weight: 400;
+                    color: $darkGrayishBlue;
+                    line-height: 1.8;
+                    @media screen and (max-width: 767px) {
+                        margin-top: 29px;
+                    }
+                }
+                .price {
+                    margin-top: 34px;
+                    margin-bottom: 37px;
+                    @media screen and (max-width: 767px) {
+                        margin-top: 37px;
+                        margin-bottom: 27px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    .tot {
+                        display: flex;
+                        font-weight: 700;
+                        align-items: center;
+                        .prezzo {
+                            color: $veryDarkBlue;
+                            font-size: 28px;
+                            font-weight: 700;
+                        }
+                        .sconto-perc {
+                            margin-left: 24px;
+                            font-size: 14px;
+                            padding: 3px 8px;
+                            border-radius: 3px;
+                            color: $orange;
+                            background-color: $paleOrange;
+                        }
+                    }
+                    .sconto {
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: $grayishBlue;
+                        text-decoration: line-through;
+                        margin-top: 17px;
+                        @media screen and (max-width: 767px) {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+                .button {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    @media screen and (max-width: 767px) {
+                        margin-bottom: 88px;
+                        display: block;
+                    }
+                    .quantity {
+                        padding: 18px 15px;
+                        display: flex;
+                        flex: 1;
+                        justify-content: space-between;
+                        background-color: $lightGrayishBlue;
+                        border-radius: 10px;
+                        font-size: 24px;
+                        .operation {
+                            color: $orange;
+                            font-weight: 700;
+                            cursor: pointer;
+                            background-color: transparent;
+                            border: none;
+                            &:hover {
+                                opacity: 0.75;
+                            }
+                        }
+                        .value {
+                            color: $veryDarkBlue;
+                            font-weight: 700;
+                        }
+                    }
+                    .add-cart {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        background-color: $orange;
+                        color: $white;
+                        flex: 2;
+                        padding: 20px 10px;
+                        font-weight: 700;
+                        border-radius: 10px;
+                        transition: all 300ms ease-in-out;
+                        &:hover {
+                            box-shadow: $orange 0px 22px 37px -15px;
+                            opacity: 0.75;
+                        }
+                        img {
+                            margin-right: 15px;
+                        }
+                        @media screen and (max-width: 767px) {
+                            margin-top: 16px;
+                        }
+                    }
+                }
+            }
+        }

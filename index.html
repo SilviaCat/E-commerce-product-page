@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!--   <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+
+<body class="body">
+
+    <header>
+        <div class="overlay"></div>
+        <div class="lightbox">
+            <div class="col-1">
+                <svg class="close" width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill-rule="evenodd"/></svg>
+                <div class="box_image"> <img src="images/image-product-1.jpg" alt="Foto prodotto 1" class="imgLightBox">
+                    <div class="frecce">
+                        <div class="frecce__sx">
+                            <div class="sx_lightbox"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8"  stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div>
+                        </div>
+                        <div class="frecce__dx">
+                            <div class="dx_lightbox"><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_image_thumb_lightbox">
+
+                    <div class="thumb-lightbox active"><img src="images/image-product-1-thumbnail.jpg" alt="Foto prodotto 1"></div>
+                    <div class="thumb-lightbox"><img src="images/image-product-2-thumbnail.jpg" alt="Foto prodotto 2"></div>
+                    <div class="thumb-lightbox"><img src="images/image-product-3-thumbnail.jpg" alt="Foto prodotto 3"></div>
+                    <div class="thumb-lightbox"><img src="images/image-product-4-thumbnail.jpg" alt="Foto prodotto 4"></div>
+
+                </div>
+            </div>
+        </div>
+        <nav class="menu container">
+            <div class="menu__left">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo"> <img src="images/logo.svg" alt="Sneakers"></div>
+                <div class="menu-desktop">
+                    <ul>
+                        <li> <a href="#">Collections</a></li>
+                        <li> <a href="#">Men</a></li>
+                        <li> <a href="#">Women</a></li>
+                        <li> <a href="#">About</a></li>
+                        <li> <a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu__right">
+                <ul>
+                    <li class="cart">
+                        <img src="images/icon-cart.svg" class="cart-box">
+                        <div class="carrello">3</div>
+                    </li>
+                    <li class="avatar"><img src="images/image-avatar.png"></li>
+                </ul>
+            </div>
+            <!-- INIZIO CHECKOUT -->
+            <div class="checkBox">
+                <div class="titolo">Cart</div>
+                <div class="riga"></div>
+                <div class="box-empty">Your cart is empty</div>
+                <div class="box-buy">
+                    <div class="description">
+                        <div class="foto"><img src="images/image-product-1-thumbnail.jpg" alt=""></div>
+                        <div class="text">
+                            <p>Fall Limited Edition Sneakers</p>
+                            <p>$125.00 x <span class="qnt">3</span> <span class="totale">376</span>
+                            </p>
+                        </div>
+                        <img src="images/icon-delete.svg" class="delete" alt="">
+                    </div>
+                    <div class="checkOut">
+                        Checkout
+                    </div>
+                </div>
+            </div>
+            <!-- FINE CHECKOUT -->
+        </nav>
+
+
+
+        <div class="menu-left-mobile">
+            <ul>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="shop container">
+        <!--  <div class="shop__container"> -->
+        <div class="col-1">
+
+            <div class="box_image"> <img src="images/image-product-1.jpg" alt="Foto prodotto 1" class="imgBox">
+                <div class="frecce">
+                    <div class="frecce__sx">
+                        <div class="sx"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8"  stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div>
+                    </div>
+                    <div class="frecce__dx">
+                        <div class="dx"><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_image_thumb">
+                <!--  <ul> -->
+                <div class="thumb active">
+                    <img src="images/image-product-1-thumbnail.jpg" alt="Foto prodotto 1">
+                </div>
+                <div class="thumb">
+                    <img src="images/image-product-2-thumbnail.jpg" alt="Foto prodotto 2">
+                </div>
+                <div class="thumb">
+                    <img src="images/image-product-3-thumbnail.jpg" alt="Foto prodotto 3">
+                </div>
+                <div class="thumb">
+                    <img src="images/image-product-4-thumbnail.jpg" alt="Foto prodotto 4">
+                </div>
+                <!--  </ul> -->
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="titolo">
+                <div class="titolo__small">Sneaker Company</div>
+                <div class="titolo__big">Fall Limited Edition<br>Sneakers</div>
+            </div>
+            <div class="description">
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+            </div>
+            <div class="price">
+                <div class="tot">
+                    <div class="prezzo">$125.00</div>
+                    <div class="sconto-perc">50%</div>
+                </div>
+                <div class="sconto">$250.00</div>
+            </div>
+            <div class="button">
+                <div class="quantity">
+                    <button class="minus operation">-</button>
+                    <p class="value">1</p>
+                    <button class="plus operation">+</button></div>
+                <div class="add-cart">
+                    <img src="images/icon-cart-w.svg" />
+                    <p>Add to cart</p>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+    </section>
+    <script src="app/js/jquery-3-6-min.js"></script>
+    <script src="app/js/app.js"></script>
+
+</body>
+
+</html>

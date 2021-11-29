@@ -1,0 +1,155 @@
+.lightbox {
+    z-index: 10;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all 300ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .col-1 {
+        display: none;
+    }
+}
+
+.open-lightbox {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, .75);
+    .col-1 {
+        display: block;
+        position: relative;
+        width: 90%;
+        /*    @media screen and (min-width: 768px) {
+            max-width: 90%;
+        } */
+        @media screen and (min-width: 768px) {
+            max-width: 445px;
+        }
+        .close {
+            /*   z-index: 1000; */
+            fill: #FFFFFF;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: -23px;
+            transition: all 150ms ease-in-out;
+            &:hover {
+                fill: #FF7D1A;
+            }
+        }
+        .box_image {
+            position: relative;
+            img {
+                /*             @media screen and (min-width: 768px) {} */
+                max-width: 100%;
+                background-size: cover;
+                border-radius: 15px;
+                /*    @media screen and (min-width: 768px) {
+                    max-width: 370px;
+                } */
+                @media screen and (min-width: 768px) {
+                    max-width: 445px;
+                }
+            }
+            .frecce {
+                &__dx {
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: -16px;
+                    div {
+                        cursor: pointer;
+                        width: 40px;
+                        height: 40px;
+                        background-color: $white;
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        svg {
+                            transition: all 150ms ease-in-out;
+                            stroke: #000000;
+                            &:hover {
+                                stroke: #FF7D1A;
+                            }
+                        }
+                    }
+                }
+                &__sx {
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: -16px;
+                    div {
+                        cursor: pointer;
+                        width: 40px;
+                        height: 40px;
+                        background-color: $white;
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        svg {
+                            transition: all 150ms ease-in-out;
+                            stroke: #000000;
+                            &:hover {
+                                stroke: #FF7D1A;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .box_image_thumb_lightbox {
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 45px;
+            .thumb-lightbox {
+                border-radius: 10px;
+                position: relative;
+                width: 20%;
+                height: 0;
+                padding-bottom: 20%;
+                overflow: hidden;
+                cursor: pointer;
+                img {
+                    transition: all 150ms ease-in-out;
+                    width: 100%;
+                    &:hover {
+                        opacity: 0.75;
+                    }
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    background-color: $white;
+                    width: 100%;
+                    top: 0;
+                    bottom: 0;
+                    z-index: -1;
+                }
+            }
+            .active {
+                outline: 2px solid $orange;
+                img {
+                    transition: all 150ms ease-in-out;
+                    opacity: 0.5;
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
