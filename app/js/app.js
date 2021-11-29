@@ -235,16 +235,16 @@ const btnPrice = document.querySelector(".add-cart"); */
 let valore = 1;
 
 minus.addEventListener('click', function() {
-       if (valore != 1) {
-            valore--;
-            console.log(valore);
-        } 
+    if (valore != 1) {
+        valore--;
+        console.log(valore);
+    }
     takeValue(valore);
 });
 
 plus.addEventListener('click', function() {
     valore++;
-    console.log(valore);
+    /* console.log(valore); */
     takeValue(valore);
 });
 
