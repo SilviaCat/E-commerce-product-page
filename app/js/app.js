@@ -173,8 +173,8 @@ getCurrentImageIndex = () => {
 }
 
 setImageBox = (imageIndex) => {
-        imageBox.src = '/images/image-product-' + imageIndex + '.jpg';
-        imageLightBox.src = '/images/image-product-' + imageIndex + '.jpg';
+        imageBox.src = 'images/image-product-' + imageIndex + '.jpg';
+        imageLightBox.src = 'images/image-product-' + imageIndex + '.jpg';
     }
     // FINE CAROUSEL BOTH FUNCTION
 
